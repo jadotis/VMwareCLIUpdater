@@ -8,7 +8,9 @@ A UNC path that hosts the installer (setup64.exe) --> Could be substituted for n
 A VIserver which is where the VMs are listed. (This is where the foldername comes in)
 
 The Snippet Below may be included if the VMware Powershell CLI is not installed:
-'''
+
+
+```
 if (!(Get-Module -Name VMware.VimAutomation.Core) -and (Get-Module -ListAvailable -Name VMware.VimAutomation.Core)) {  
     Write-Output "loading the VMware COre Module..."  
     if (!(Import-Module -Name VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {  
@@ -24,6 +26,6 @@ if (!(Get-Module -Name VMware.VimAutomation.Core) -and (Get-Module -ListAvailabl
      Write-Error "`nERROR: Cannot load the VMware Snapin or Module. Is the PowerCLI installed?"  
      }  
     }  
-'''
+```
 
 Please feel free to contact with questions, concerns or recommendations (jadotis@bu.edu)
